@@ -1,0 +1,23 @@
+# Language-specific ignores get added in S1P1 (see STACK.md)
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Claude Code personal files
+.claude/settings.local.json
+CLAUDE.local.md
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Build output (common names)
+build/
+dist/
+out/
