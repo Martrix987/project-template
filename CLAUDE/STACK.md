@@ -1,6 +1,6 @@
 # STACK
 
-<!-- Step 2 of the kickoff. HOW it is built: derived from PLAN.md. -->
+<!-- Step 3 of the kickoff. HOW it is built: derived from PLAN.md and DESIGN.md. -->
 <!-- Every choice gets a one-line reason that points to a requirement (M1, S2…). -->
 
 ## Languages and frameworks

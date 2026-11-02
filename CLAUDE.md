@@ -6,6 +6,7 @@
 ## Project
 - One line: what this is → see `CLAUDE/PLAN.md`
 - Stack, build and run commands → see `CLAUDE/STACK.md`
+- Visual style → see `CLAUDE/DESIGN.md` (if it exists); read it before any UI work
 
 ## Session start
 1. Read `CLAUDE/HANDOFF.md` (where we left off)
@@ -38,6 +39,7 @@
 - One blank line between logical blocks; group code like paragraphs
 - Small functions that do one thing; return early instead of deep nesting
 - No magic numbers: name them as constants
+- UI colours, fonts and durations only come from the theme file named in DESIGN.md
 - Comments explain *why*, not *what*; every file starts with a 1–3 line header saying its purpose
 - Handle errors explicitly; never swallow them silently
 - Match the existing style of a file before applying these rules to it

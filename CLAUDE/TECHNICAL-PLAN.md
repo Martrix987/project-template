@@ -1,8 +1,9 @@
 # TECHNICAL-PLAN
 
-<!-- Step 3 of the kickoff. The route from empty repo to "Done when" in PLAN.md. -->
+<!-- Step 4 of the kickoff. The route from empty repo to "Done when" in PLAN.md. -->
 <!-- Stage = big chapter with a working, demo-able result at the end. -->
 <!-- Phase = one Claude Code run = one commit. Small enough to review in ~10 minutes. -->
+<!-- If DESIGN.md exists, Stage 1 includes a phase that creates the theme file. -->
 <!-- Phase IDs: S<stage>P<phase>, used in commit messages: "feat(S1P2): ..." -->
 
 ## Status
