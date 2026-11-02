@@ -6,6 +6,7 @@ How a project goes from idea to commits with Claude (browser) and Claude Code.
 - `CLAUDE.md` — short rules, loaded by Claude Code every session
 - `CLAUDE/` — AI context, UPPERCASE names
   - `PLAN.md` — what and why, requirements (Must / Should / Could / Won't)
+  - `DESIGN.md` — visual style; only for projects with a UI (delete otherwise)
   - `STACK.md` — languages, tools, commands, style exceptions
   - `TECHNICAL-PLAN.md` — stages and phases with checkboxes
   - `HANDOFF.md` — where the last session stopped
@@ -17,20 +18,23 @@ How a project goes from idea to commits with Claude (browser) and Claude Code.
 - `.editorconfig`, `.gitattributes`, `.vscode/` — same formatting and line endings everywhere
 
 ## 1. Plan in the browser
-Uses the claude.ai Project **Project-Kickoff** (instructions + the three templates as project files). One chat per project idea.
+Uses the claude.ai Project **Project-Kickoff** (instructions + the four templates as project files). One chat per project idea.
 
 1. **Brainstorm** — describe the idea as vague as you like; Claude riffs, suggests and pushes back. No templates yet.
 2. **Concept check** — say "let's plan"; Claude sums up the concept in 5–10 bullets. Correct it until it's right.
 3. **PLAN** — Claude fills PLAN.md from the brainstorm and only asks about gaps.
-4. **STACK** — Claude researches options and fills STACK.md.
-5. **TECHNICAL-PLAN** — Claude splits the work into stages and phases.
-6. Download the three files.
+4. **DESIGN** (optional) — Claude asks if the project needs one.
+   - design questions → mood board (2–3 variants if unsure) → DESIGN.md
+5. **STACK** — Claude researches options and fills STACK.md.
+6. **TECHNICAL-PLAN** — Claude splits the work into stages and phases.
+7. Download the files.
 
-Long, wandering brainstorm? Start a new chat for steps 3–5 and paste only the concept summary.
+Long, wandering brainstorm? Start a new chat for steps 3–7 and paste only the concept summary.
 
 ## Create the repo
 1. GitHub or Gitea: new repository from this template
-2. Clone it, put the three downloaded files in `CLAUDE/` (overwrite the templates)
+2. Clone it, put the downloaded files in `CLAUDE/` (overwrite the templates)
+   - no DESIGN.md made? delete `CLAUDE/DESIGN.md`
 3. Commit: `docs: project plan`
 
 No browser? Run `/kickoff <idea>` in Claude Code instead.
