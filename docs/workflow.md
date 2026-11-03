@@ -14,6 +14,8 @@ How a project goes from idea to commits with Claude (browser) and Claude Code.
 - `docs/` — human docs, lowercase names
 - `src/`, `tests/` — code and tests (empty until S1P1)
 - `.claude/commands/` — slash commands for Claude Code
+- `.claude/skills/afk/` — `/afk`: unattended run with Telegram updates
+- `.claude/hooks/` — Telegram notifier used by `/afk`
 - `.claude/settings.json` — blocks Claude from committing, pushing and reading `.env`
 - `.editorconfig`, `.gitattributes`, `.vscode/` — same formatting and line endings everywhere
 
@@ -46,6 +48,19 @@ No browser? Run `/kickoff <idea>` in Claude Code instead.
 4. Review the diff, then commit yourself
 5. Start a fresh session (`/clear`) every few phases; HANDOFF.md carries the context
 6. `/write-doc <topic>` — write a human doc when needed
+
+## AFK runs (work while you're away)
+- One-time setup:
+  1. Telegram: message `@BotFather` → `/newbot` → copy the token
+  2. Send your bot any message, then open `https://api.telegram.org/bot<TOKEN>/getUpdates` → copy `chat.id`
+  3. PowerShell: `setx TELEGRAM_BOT_TOKEN "<token>"` and `setx TELEGRAM_CHAT_ID "<id>"`, then restart VS Code / the terminal
+- Per run:
+  1. Clean working tree on `dev` (commit first)
+  2. `/afk` (rest of the stage) or `/afk 3` (next 3 phases)
+  3. Answer the questions, approve installs and commands, check the test message arrives
+  4. Switch to accept-edits mode (Shift+Tab), keep the laptop plugged in and awake, say `go`
+  5. Telegram tells you when it is stuck, waiting for approval, or done
+  6. Back: read `CLAUDE/AFK-REPORT.md`, review the diff, commit, run the `/compact` line it gives you
 
 ## Branches
 - `main` — only finished stages; protected, changes only via pull request

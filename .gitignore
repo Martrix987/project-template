@@ -8,6 +8,7 @@
 # Claude Code personal files
 .claude/settings.local.json
 CLAUDE.local.md
+.claude/afk.active
 
 # OS and editors
 .DS_Store
